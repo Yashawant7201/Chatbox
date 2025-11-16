@@ -43,6 +43,7 @@ Open your browser
 text
 Navigate to http://localhost:5173
 🏗️ Project Structure
+<pre>
 text
 src/
 ├── Components/
@@ -55,6 +56,9 @@ src/
     ├── App.css              # Main layout styles
     ├── ChatBox.css          # Sidebar styles
     └── MessageContainer.css # Chat area styles
+    </pre>
+
+    
 🎮 How to Use
 Select a User 👥
 

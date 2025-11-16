@@ -11,10 +11,10 @@ export default function ChatBox({onUserSelect, selectedUser}){
         {id:4, name: "User4"}
     ];
 
-    console.log('ChatBox rendering, users:', users);
+    // console.log('ChatBox rendering, users:', users);
 
     const handleUserClick = (user) => {
-        console.log('User clicked:', user);
+        // console.log('User clicked:', user);
         onUserSelect(user);
 };
 

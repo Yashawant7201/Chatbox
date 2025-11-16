@@ -5,7 +5,7 @@ import './App.css'
 
 function App() {
   const [selectedUser, setSelectedUser] = useState(null);
-  console.log('App rendering, selectedUser:', selectedUser);
+  // console.log('App rendering, selectedUser:', selectedUser);
   
   return (
  <div className="container">

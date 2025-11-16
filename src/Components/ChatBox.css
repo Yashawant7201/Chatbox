@@ -2,10 +2,10 @@
     width: 100%;
     background-color: #2d3748;
     color: white;
-    padding: 15px;
+    padding: 12px 10px;
     overflow-y: auto;
     height: auto;
-    max-height: 200px;
+    max-height: 180px;
     border-bottom: 1px solid #4a5568;
     order: 2;
 }
@@ -16,19 +16,22 @@
     margin: 0;
     display: flex;
     overflow-x: auto;
-    gap: 8px;
+    gap: 6px;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling for iOS */
 }
 
 .user-item {
     display: flex;
     align-items: center;
-    padding: 10px 15px;
+    padding: 8px 12px;
     border-radius: 20px;
     cursor: pointer;
     transition: background-color 0.2s;
     white-space: nowrap;
     flex-shrink: 0;
     border: 1px solid #4a5568;
+    font-size: 0.85rem;
+    min-height: 36px;
 }
 
 .user-item:hover {
@@ -40,9 +43,41 @@
     border-color: #4299e1;
 }
 
+/* iPhone SE and very small screens */
+@media (max-width: 320px) {
+    .chat-panel {
+        padding: 10px 8px;
+        max-height: 160px;
+    }
+    
+    .user-item {
+        padding: 6px 10px;
+        font-size: 0.8rem;
+        min-height: 32px;
+        border-radius: 16px;
+    }
+    
+    .user-list {
+        gap: 4px;
+    }
+}
+
+/* iPhone 6/7/8 and similar */
+@media (min-width: 321px) and (max-width: 375px) {
+    .chat-panel {
+        padding: 12px 10px;
+        max-height: 170px;
+    }
+    
+    .user-item {
+        padding: 8px 12px;
+        font-size: 0.82rem;
+    }
+}
+
 /* Hide horizontal scrollbar but keep functionality */
 .user-list::-webkit-scrollbar {
-    height: 4px;
+    height: 3px;
 }
 
 .user-list::-webkit-scrollbar-track {
@@ -63,6 +98,7 @@
         border-bottom: none;
         border-right: 1px solid #4a5568;
         order: 1;
+        padding: 20px;
     }
 
     .user-list {
@@ -78,5 +114,7 @@
         border: none;
         white-space: normal;
         flex-shrink: 1;
+        font-size: 1rem;
+        min-height: auto;
     }
 }
